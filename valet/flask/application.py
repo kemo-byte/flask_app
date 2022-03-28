@@ -1,5 +1,5 @@
 import random
-from urllib import request;
+# from urllib import request;
 from flask import Flask, render_template,request
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ number=random.randint(1,10)
 
 def index():
   return render_template('index.html',number=number)
-  
+
 @app.route('/goodbye')
 def bye():
   return 'Good Bye'
