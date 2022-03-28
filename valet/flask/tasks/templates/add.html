@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<form action="/add" method="post">
+  <input id="task" type="text" name="task" autofocus>
+  <input id="submit" type="submit" value="submit" disabled>
+</form>
+
+<script>
+  document.getElementById('task').onkeyup = function() {
+    if(document.getElementById('task').value == '') {
+      document.getElementById('submit').disabled = true;
+    } else {
+      document.getElementById('submit').disabled = false;
+    }
+  };
+</script>
+{% endblock %}
